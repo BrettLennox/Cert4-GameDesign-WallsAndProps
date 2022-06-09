@@ -1,6 +1,6 @@
 //Maya ASCII 2022 scene
 //Name: Walls.ma
-//Last modified: Thu, Jun 09, 2022 05:24:15 PM
+//Last modified: Thu, Jun 09, 2022 05:39:46 PM
 //Codeset: 1252
 requires maya "2022";
 requires "mtoa" "4.2.3";
@@ -10,13 +10,13 @@ fileInfo "product" "Maya 2022";
 fileInfo "version" "2022";
 fileInfo "cutIdentifier" "202106180615-26a94e7f8c";
 fileInfo "osv" "Windows 10 Enterprise v2009 (Build: 19042)";
-fileInfo "UUID" "34530096-44ED-C7A0-5296-E1A7947DE189";
+fileInfo "UUID" "706971F2-4AFF-57E4-CF6D-E79E4CA4CBE6";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "D5CA69A6-4D0A-1D5B-B9D5-9DB049C6B24F";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 8.7563371344569116 2.0012577428324034 0.64239890622919549 ;
-	setAttr ".r" -type "double3" -5.7383527301361443 -2455.0000000005439 0 ;
+	setAttr ".t" -type "double3" 36.945274819865681 20.698770212986332 8.6814271528508407 ;
+	setAttr ".r" -type "double3" -26.738352730126088 -2448.2000000005328 1.0183154341255582e-14 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "1978D2F5-4FA8-E764-9D53-3A81D834AE4A";
 	setAttr -k off ".v" no;
@@ -24,7 +24,7 @@ createNode camera -s -n "perspShape" -p "persp";
 	setAttr ".ncp" 0.001;
 	setAttr ".fcp" 100;
 	setAttr ".fd" 0.05;
-	setAttr ".coi" 9.9102890800648531;
+	setAttr ".coi" 43.760082058711582;
 	setAttr ".ow" 0.1;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
@@ -222,8 +222,8 @@ createNode mesh -n "Wall1Shape" -p "Wall1";
 		 0.25 0.73636889 0.013556519 0.25 0.73636889 -0.013555298 0.25 0.76348114 6.1035155e-07
 		 0.25 0.73636889 -1.2499994 0.25 -0.013556156 6.1035155e-07 0.25 0.013556156 -0.013555298
 		 0.25 0.013556156 0.013556519 0.25 0.013556156 -1.2499994 0.25 -1.47876596 2.47876596
-		 0.22876605 -1.5 2.5 0.25 -0.76324946 2.47335148 0.25 -0.72916186 2.5 0.25 -1.47876596 -2.47876525
-		 0.22876605 -1.5 -2.49999928 0.25 -1.47803295 0.015533447 0.22994742 -1.5 6.1035155e-07
+		 0.22876604 -1.5 2.5 0.25 -0.76324946 2.47335148 0.25 -0.72916186 2.5 0.25 -1.47876596 -2.47876525
+		 0.22876604 -1.5 -2.49999928 0.25 -1.47803295 0.015533447 0.22994742 -1.5 6.1035155e-07
 		 0.25 -1.47803295 -0.015532226 0.25 -0.76409453 -2.47166085 0.25 -0.72970235 -2.49999928
 		 0.25 -0.76493967 -1.2499994 0.25 -0.73491037 6.1035155e-07 0.25 -0.76493967 0.015015258
 		 0.25 -0.76493967 -0.015014038 0.25 -0.76493967 1.25 0.25 1.48083067 2.5 0.23083065 1.5 2.5
@@ -646,7 +646,6 @@ createNode mesh -n "polySurfaceShape1" -p "TWall2";
 	rename -uid "AF2028BC-4D53-8A7F-9F7E-03B1AFD56A43";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
-	setAttr -s 2 ".iog[0].og";
 	setAttr ".iog[0].og[1].gcl" -type "componentList" 3 "e[4]" "e[6:7]" "e[9:11]";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -732,7 +731,6 @@ createNode mesh -n "polySurfaceShape1" -p "TWall3";
 	rename -uid "35B3A8B4-41CC-77F7-B373-CEB1F4F39654";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
-	setAttr -s 2 ".iog[0].og";
 	setAttr ".iog[0].og[1].gcl" -type "componentList" 3 "e[4]" "e[6:7]" "e[9:11]";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -803,7 +801,7 @@ createNode mesh -n "TWall3Shape" -p "transform1";
 	rename -uid "1B73AB44-47C0-8A00-DC27-C8B4259D8680";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
-	setAttr -s 3 ".iog[0].og";
+	setAttr -s 2 ".iog[0].og";
 	setAttr ".iog[0].og[1].gcl" -type "componentList" 2 "e[0:5]" "e[9:10]";
 	setAttr ".iog[0].og[2].gcl" -type "componentList" 1 "f[0:355]";
 	setAttr ".vir" yes;
@@ -976,9 +974,9 @@ createNode mesh -n "TWall3Shape" -p "transform1";
 		 2.47477341 -0.7677629 0.24997498 2.5 -0.749924 0.2259082 0.25 -0.7677629 -2.47477293
 		 0.22593327 -0.74992406 -2.5 0.25 0.017674133 1.37498784 1.375 0.017674133 0.24997498
 		 1.375 0.017674133 -0.24997498 0.25 0.017674133 -1.37498784 0.22593446 1.5 -0.22590943
-		 0.25 1.47593451 -0.24997498 0.25 1.47510362 -1.3925916 0.22727334 1.5 -1.37498784
+		 0.25 1.47593451 -0.24997498 0.25 1.47510362 -1.3925916 0.22727333 1.5 -1.37498784
 		 0.25 1.47510362 -1.35738409 0.25 1.47593451 2.47593451 0.22593446 1.5 2.5 0.25 1.47510362 1.35738337
-		 0.22727334 1.5 1.37498784 0.25 1.47510362 1.39259219 0.22593446 1.5 0.22590943 0.25 1.47593451 0.24997498
+		 0.22727333 1.5 1.37498784 0.25 1.47510362 1.39259219 0.22593446 1.5 0.22590943 0.25 1.47593451 0.24997498
 		 1.39260435 1.47510362 0.24997498 1.375 1.5 0.22724853 1.35739565 1.47510362 0.24997498
 		 1.35739565 1.47510362 -0.24997498 1.375 1.5 -0.22724853 1.39260435 1.47510362 -0.24997498
 		 0.25 1.47593451 -2.47593498 0.22593446 1.5 -2.5 0.25 0.76847285 -2.47593498 0.25 0.75450498 -2.49030757
@@ -1879,7 +1877,6 @@ createNode mesh -n "polySurfaceShape1" -p "TWall4";
 	rename -uid "01FF175C-44C4-6CAF-D6BB-7D8DDB9C4407";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
-	setAttr -s 2 ".iog[0].og";
 	setAttr ".iog[0].og[1].gcl" -type "componentList" 3 "e[4]" "e[6:7]" "e[9:11]";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -1950,7 +1947,7 @@ createNode mesh -n "TWall4Shape" -p "transform2";
 	rename -uid "2B82F4AF-402F-3766-7CE1-94A6EF31B736";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
-	setAttr -s 3 ".iog[0].og";
+	setAttr -s 2 ".iog[0].og";
 	setAttr ".iog[0].og[2].gcl" -type "componentList" 15 "e[0:2]" "e[7]" "e[13]" "e[15]" "e[20]" "e[32:33]" "e[200]" "e[205]" "e[218]" "e[229]" "e[231]" "e[236]" "e[244]" "e[266]" "e[289]";
 	setAttr ".iog[0].og[3].gcl" -type "componentList" 1 "f[0:341]";
 	setAttr ".vir" yes;
@@ -2116,9 +2113,9 @@ createNode mesh -n "TWall4Shape" -p "transform2";
 		 2.47477341 -0.7677629 0.24997498 2.5 -0.749924 0.2259082 0.25 -0.7677629 -2.47477293
 		 0.22593327 -0.74992406 -2.5 0.25 0.017674133 1.37498784 1.375 0.017674133 0.24997498
 		 1.375 0.017674133 -0.24997498 0.25 0.017674133 -1.37498784 0.22593446 1.5 -0.22590943
-		 0.25 1.47593451 -0.24997498 0.25 1.47510362 -1.3925916 0.22727334 1.5 -1.37498784
+		 0.25 1.47593451 -0.24997498 0.25 1.47510362 -1.3925916 0.22727333 1.5 -1.37498784
 		 0.25 1.47510362 -1.35738409 0.25 1.47593451 2.47593451 0.22593446 1.5 2.5 0.25 1.47510362 1.35738337
-		 0.22727334 1.5 1.37498784 0.25 1.47510362 1.39259219 0.22593446 1.5 0.22590943 0.25 1.47593451 0.24997498
+		 0.22727333 1.5 1.37498784 0.25 1.47510362 1.39259219 0.22593446 1.5 0.22590943 0.25 1.47593451 0.24997498
 		 1.39260435 1.47510362 0.24997498 1.375 1.5 0.22724853 1.35739565 1.47510362 0.24997498
 		 1.35739565 1.47510362 -0.24997498 1.375 1.5 -0.22724853 1.39260435 1.47510362 -0.24997498
 		 0.25 1.47593451 -2.47593498 0.22593446 1.5 -2.5 0.25 0.76847285 -2.47593498 0.25 0.75450498 -2.49030757
@@ -2998,6 +2995,7 @@ createNode mesh -n "XWall2Shape" -p "XWall2";
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "WallConcave";
 	rename -uid "6979A850-4AC8-341C-01F1-E490F2AA419E";
+	setAttr ".t" -type "double3" -27.969932079908332 0 0 ;
 createNode mesh -n "WallConcaveShape" -p "WallConcave";
 	rename -uid "BCB2B7B7-40A5-2653-1EA1-108BE9C38F07";
 	setAttr -k off ".v";
@@ -3013,6 +3011,7 @@ createNode mesh -n "WallConcaveShape" -p "WallConcave";
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "WallConcave2";
 	rename -uid "ABDD8323-46D9-EA7C-CCA3-F583267687E0";
+	setAttr ".t" -type "double3" -27.969932079908332 0 -5.1835352003309207 ;
 createNode mesh -n "WallConcave2Shape" -p "WallConcave2";
 	rename -uid "AE26F46F-4A5D-8865-2DE0-11983C2F1720";
 	setAttr -k off ".v";
@@ -3080,19 +3079,19 @@ createNode mesh -n "polySurfaceShape2" -p "WallConcave2";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "F3D1E400-4B73-E67D-13B1-268A7A3F8164";
+	rename -uid "D95256DB-4864-9F94-A7FF-3D99A184D287";
 	setAttr -s 2 ".lnk";
 	setAttr -s 2 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "B9407369-4AD7-4B22-FDB8-BA8E8A456271";
+	rename -uid "45DE2BD3-42B4-CAB4-E0CD-AD862584BECA";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "DD7E2CC4-4F3A-01A9-2445-2AA2C653C706";
+	rename -uid "AF6EAFA0-4CB5-7CB9-A327-1AAD52908084";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "40C4185D-40D6-DBF6-DB48-698E8050D246";
+	rename -uid "34443DE4-473C-B5AF-742C-569C3E4D6737";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "FE382C28-476E-A959-11D9-20938AFD3A1D";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "F3BF72E7-4ACF-492D-90E7-9F99A8B747B5";
+	rename -uid "16B5403D-4191-034E-A02B-A783EDD5DB67";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "20F10EC4-4C4D-3517-D0E6-41ADDEF0AE07";
 	setAttr ".g" yes;
@@ -3525,7 +3524,7 @@ createNode polyExtrudeFace -n "polyExtrudeFace2";
 createNode polyTweak -n "polyTweak1";
 	rename -uid "4D8962FA-4020-36DB-0547-8EB14FA177AB";
 	setAttr ".uopa" yes;
-	setAttr -s 18 ".tk";
+	setAttr -s 8 ".tk";
 	setAttr ".tk[196]" -type "float3" 2 0 1.9999398 ;
 	setAttr ".tk[197]" -type "float3" 2 0 1.9999398 ;
 	setAttr ".tk[222]" -type "float3" 2 0 -1.9950651 ;
@@ -3752,7 +3751,7 @@ createNode polyBevel3 -n "polyBevel10";
 createNode polyTweak -n "polyTweak2";
 	rename -uid "7A1AE7F8-4FCF-6D7D-3D22-74A50D53E643";
 	setAttr ".uopa" yes;
-	setAttr -s 17 ".tk";
+	setAttr -s 4 ".tk";
 	setAttr ".tk[113]" -type "float3" 2 0 1.9997002 ;
 	setAttr ".tk[114]" -type "float3" 2 0 1.9997002 ;
 	setAttr ".tk[127]" -type "float3" 2 0 1.9997002 ;
@@ -3798,8 +3797,6 @@ select -ne :defaultColorMgtGlobals;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
-select -ne :ikSystem;
-	setAttr -s 4 ".sol";
 connectAttr "groupId1.id" "WallShape.iog.og[0].gid";
 connectAttr "set1.mwc" "WallShape.iog.og[0].gco";
 connectAttr "groupId2.id" "Wall1Shape.iog.og[0].gid";
